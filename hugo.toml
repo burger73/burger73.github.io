@@ -1,0 +1,43 @@
+# baseURL wird beim Build auf GitHub automatisch gesetzt (siehe .github/workflows/hugo.yml)
+baseURL = "https://example.org/"
+defaultContentLanguage = "de"
+locale = "de-de"               # TODO: "en"/"en-us", falls auf Englisch geschrieben wird
+title = "Blog"                 # TODO: Titel festlegen
+theme = "PaperMod"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  author = "Markus"            # TODO: Klarname oder Pseudonym
+  description = "Gedanken zu KI und Softwareentwicklung aus 27 Jahren Praxis"
+  defaultTheme = "auto"        # hell/dunkel nach Systemeinstellung
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  disableShare = true          # keine Social-Share-Buttons (Datenschutz)
+
+  [params.homeInfoParams]
+    Title = "Hallo 👋"
+    Content = "Softwareentwickler seit 27 Jahren. Hier schreibe ich über KI im Entwickleralltag, Smart Home ohne Cloud und Digitalisierung im öffentlichen Sektor."
+
+[[menu.main]]
+  name = "Artikel"
+  url = "/posts/"
+  weight = 10
+[[menu.main]]
+  name = "Impressum"
+  url = "/impressum/"
+  weight = 90
+
+# Datenschutz: keine Einbettungen von Drittanbietern
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
+  [privacy.x]
+    disable = true
+  [privacy.vimeo]
+    disable = true
